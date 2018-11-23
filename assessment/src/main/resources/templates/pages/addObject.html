@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="zh-CN">
+
+<head>
+
+    <th:block th:include="fragments::header"></th:block>
+
+    <title>登录</title>
+
+</head>
+
+<body>
+<!-- /#wrapper -->
+<div id="wrapper">
+
+    <th:block th:include="fragments::topNav"></th:block>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="panel panel-default ">
+                <div class="panel-heading">
+                    <ol class="breadcrumb " style="margin-bottom:0">
+                        <li><a href="#">对象管理</a></li>
+                        <li class="active">人员添加</li>
+                    </ol>
+                </div>
+                <div class="panel-body ">
+                    <form class="form-horizontal">
+                        <!-- 第1行   -->
+                        <div class="form-group col-sm-3">
+                            <label class="col-sm-4 control-label" style="top: 10px">组织名称</label>
+                            <div class="col-sm-8">
+                                <select id="organizeName" class="form-control">
+                                    <option value="0">区府</option>
+                                    <option value="1">--国税局</option>
+                                    <option value="1">----国税局1</option>
+                                    <option value="1">----国税局2</option>
+                                    <option value="2">--工商所</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-sm-4 control-label" style="top: 10px">考核对象年份</label>
+                            <div class="col-sm-8">
+                                <select id="year" class="form-control">
+                                    <option value="0">2017</option>
+                                    <option value="1">2018</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 clear">&nbsp;<br/><br/><br/></div>
+                        <!-- 第2行   -->
+                        <div class="form-group col-sm-3">
+                            <label for="name" class="col-lg-4 control-label">姓名</label>
+                            <div class="col-lg-8 ">
+                                <input type="text" class="form-control" id="name" placeholder="请填写组织名称"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="address" class="col-lg-4 control-label">单位</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" id="address" placeholder="请填写组织地址"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 clear">&nbsp;<br/><br/><br/></div>
+                        <!-- 第3行   -->
+                        <div class="form-group col-sm-3">
+                            <label for="liaisons" class="col-lg-4 control-label">职务</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" id="liaisons" placeholder="请填写组织联络人"/>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label for="phone" class="col-lg-4 control-label">电话</label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" id="phone" placeholder="请填写组织联络电话"/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 clear">&nbsp;<br/><br/><br/></div>
+                        <!-- 第4行   -->
+                        <div class="form-group col-sm-3">
+                            <label class="col-lg-4 control-label">人员类别</label>
+                            <div class="col-lg-8">
+                                <select id="type" class="form-control">
+                                    <option value="0">干部</option>
+                                    <option value="1">员工</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-3">
+                            <label class="col-lg-4 control-label"></label>
+                            <div class="col-lg-8">
+                                <button type="button" class="btn btn-primary" style="margin-right: 20px">
+                                    确认
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    返回
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+
+
+<th:block th:include="fragments::script"></th:block>
+<script>
+    $("a[href$='object']").addClass("active");
+</script>
+</body>
+
+</html>

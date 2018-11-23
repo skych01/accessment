@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="zh-CN">
+
+<head>
+
+    <th:block th:include="fragments::header"></th:block>
+    <title>会议管理</title>
+</head>
+
+<body>
+<!-- /#wrapper -->
+<div id="wrapper">
+
+    <th:block th:include="fragments::topNav"></th:block>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        <ol class="breadcrumb " style="margin-bottom:0" width="40%">
+                            <li class="active">会议管理</li>
+                            <button type="button" class="btn btn-default" style="float: right;margin-right: 20px">
+                                审核
+                            </button>
+                            <a type="button" href="addMetting" class="btn btn-default"
+                               style="float: right;margin-right: 20px">
+                                新增会议
+                            </a>
+                        </ol>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="form-group col-sm-3">
+                                    <label class="col-sm-4 control-label" style="top: 10px">组织名称</label>
+                                    <div class="col-sm-7">
+                                        <select id="organizeName" class="form-control">
+                                            <option value="0">区府</option>
+                                            <option value="1">--国税局</option>
+                                            <option value="1">----国税局1</option>
+                                            <option value="1">----国税局2</option>
+                                            <option value="2">--工商所</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group col-sm-3">
+                                    <button type="button" class="btn btn-default">
+                                        查询
+                                    </button>
+                                </div>
+                                <br/><br/> <br/><br/><br/>
+                                <div class="table-responsive" style="width: 1000px">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>会议名称</th>
+                                            <th>会议地点</th>
+                                            <th>会议时间</th>
+                                            <th>审核状态</th>
+                                            <th>操作者</th>
+                                            <th>审核者</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>学术会议</td>
+                                            <td>xxx路xxx号202</td>
+                                            <td>2018-11-30</td>
+                                            <td>通过</td>
+                                            <td>张三</td>
+                                            <td>李四</td>
+                                            <td>
+                                                <a href="mettingObject" class='btn btn-default btn-xs' role='button'>查看人员</a>
+                                                <a  href="addMetting" class='btn btn-default btn-xs' role='button'>&nbsp;编&nbsp;辑</a>
+                                                <a class='btn btn-danger btn-xs' role='button'>&nbsp;删&nbsp;除</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>学术会议</td>
+                                            <td>xxx路xxx号202</td>
+                                            <td>2018-11-30</td>
+                                            <td>通过</td>
+                                            <td>张三</td>
+                                            <td>李四</td>
+                                            <td>
+                                                <a href="mettingObject" class='btn btn-default btn-xs' role='button'>查看人员</a>
+                                                <a  href="addMetting" class='btn btn-default btn-xs' role='button'>&nbsp;编&nbsp;辑</a>
+                                                <a class='btn btn-danger btn-xs' role='button'>&nbsp;删&nbsp;除</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>学术会议</td>
+                                            <td>xxx路xxx号202</td>
+                                            <td>2018-11-30</td>
+                                            <td>通过</td>
+                                            <td>张三</td>
+                                            <td>李四</td>
+                                            <td>
+                                                <a href="mettingObject" class='btn btn-default btn-xs' role='button'>查看人员</a>
+                                                <a  href="addMetting" class='btn btn-default btn-xs' role='button'>&nbsp;编&nbsp;辑</a>
+                                                <a class='btn btn-danger btn-xs' role='button'>&nbsp;删&nbsp;除</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+
+
+<th:block th:include="fragments::script"></th:block>
+</body>
+
+</html>

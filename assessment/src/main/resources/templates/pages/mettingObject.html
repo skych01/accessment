@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="zh-CN">
+
+<head>
+
+    <th:block th:include="fragments::header"></th:block>
+
+    <title>参会人员管理</title>
+
+</head>
+
+<body>
+<!-- /#wrapper -->
+<div id="wrapper">
+
+    <th:block th:include="fragments::topNav"></th:block>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default" style="padding-right: 0;padding-left: 0">
+                    <div class="panel-heading">
+
+                        <ol class="breadcrumb " style="margin-bottom:0" width="40%">
+                            <li><a>会议管理</a></li>
+                            <li class="active">参会人员管理</li>
+                            <a type="button" id="addMettingObjectBtn" class="btn btn-default"
+                               style="float: right;margin-right: 20px;margin-bottom: 20px">
+                                新增参会人员
+                            </a>
+                        </ol>
+                        <div style="float: right">
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="panel panel-default">
+
+                            <!-- /.panel-heading -->
+                            <div class="panel-body">
+                                <div class="table-responsive" style="width: 800px">
+                                    <table class="table table-hover">
+                                        <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>姓名</th>
+                                            <th>单位</th>
+                                            <th>职务</th>
+                                            <th>手机号码</th>
+                                            <th>人员类别</th>
+                                            <th>操作</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Mark</td>
+                                            <td>国税局1</td>
+                                            <td>局长</td>
+                                            <td>12345678911</td>
+                                            <td>代表员</td>
+                                            <td>
+                                                <a class='btn btn-danger btn-xs' role='button'>&nbsp;移&nbsp;除</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Mark</td>
+                                            <td>国税局1</td>
+                                            <td>局长</td>
+                                            <td>12345678911</td>
+                                            <td>代表员</td>
+                                            <td>
+                                                <a class='btn btn-danger btn-xs' role='button'>&nbsp;移&nbsp;除</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Mark</td>
+                                            <td>国税局1</td>
+                                            <td>局长</td>
+                                            <td>12345678911</td>
+                                            <td>代表员</td>
+                                            <td>
+                                                <a class='btn btn-danger btn-xs' role='button'>&nbsp;移&nbsp;除</a>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.table-responsive -->
+                            </div>
+                            <!-- /.panel-body -->
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+
+<div class="modal fade" id="addYearModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabelTtitle">选择参会人员</h4>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>姓名</th>
+                            <th>单位</th>
+                            <th>职务</th>
+                            <th>手机号码</th>
+                            <th>人员类别</th>
+                            <th>选择</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mark</td>
+                            <td>国税局1</td>
+                            <td>局长</td>
+                            <td>12345678911</td>
+                            <td>代表员</td>
+                            <td>
+                                <input type="checkbox" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Mark</td>
+                            <td>国税局1</td>
+                            <td>局长</td>
+                            <td>12345678911</td>
+                            <td>代表员</td>
+                            <td>
+                                <input type="checkbox" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Mark</td>
+                            <td>国税局1</td>
+                            <td>局长</td>
+                            <td>12345678911</td>
+                            <td>代表员</td>
+                            <td>
+                                <input type="checkbox" value="" />
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btnSaveLogo">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<th:block th:include="fragments::script"></th:block>
+<script>
+    $("a[href$='metting']").addClass("active");
+    $("#addMettingObjectBtn").click(function () {
+        $("#addYearModel").modal('show');
+    });
+</script>
+</body>
+
+</html>

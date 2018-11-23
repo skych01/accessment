@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="zh-CN">
+
+<head>
+
+    <th:block th:include="fragments::header"></th:block>
+    <title>人员类别管理</title>
+</head>
+
+<body>
+<!-- /#wrapper -->
+<div id="wrapper">
+
+    <th:block th:include="fragments::topNav"></th:block>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <ol class="breadcrumb " style="margin-bottom:0">
+                        <li class="active">人员类别管理</li>
+                    </ol>
+                </div>
+                <div class="panel-body ">
+                    <div class="table-responsive" style="width: 400px">
+                        <table class="table table-hover">
+                            <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>类别</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>干部</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>局长</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>员工</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <button type="button" class="btn btn-default">
+                            新增
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addTypeModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabelTtitle">新增人员类别</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form" class="form-horizontal ">
+                    <br/>
+                    <div class="form-group" id="link">
+                        <label class="col-sm-3 control-label" for="src">人员类别</label>
+                        <div class="col-sm-7">
+                            <input id="src" name="src" type="text" class="form-control"
+                                   placeholder="请输入人员类别"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="btnSaveLogo">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
+<th:block th:include="fragments::script"></th:block>
+<script>
+    $("button").click(function () {
+        $("#addTypeModel").modal('show');
+    });
+</script>
+</body>
+
+</html>

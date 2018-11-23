@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      lang="zh-CN">
+
+<head>
+
+    <th:block th:include="fragments::header"></th:block>
+
+    <title>组织管理</title>
+
+</head>
+
+<body>
+<!-- /#wrapper -->
+<div id="wrapper">
+
+    <th:block th:include="fragments::topNav"></th:block>
+
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-2 well" style="height: 100%">
+                <h3>总览</h3>
+                <div class="panel-body" id="organizeTree">
+                    <!-- 区府 -->
+                    <div>
+                        <h4>
+                            <div class="btn-group">
+                                <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">区府</a>
+                                <ul class='dropdown-menu'>
+                                    <li><a href='#'>查看</a></li>
+                                    <li><a href='#'>新增</a></li>
+                                </ul>
+                            </div>
+                        </h4>
+                        <ul>
+                            <li><a>
+                                <div class="btn-group">
+                                    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">区国税局</a>
+                                    <ul class='dropdown-menu'>
+                                        <li><a href='#'>查看</a></li>
+                                        <li><a href='#'>新增</a></li>
+                                    </ul>
+                                </div>
+                            </a>
+                                <ul>
+                                    <li><a>
+                                        <div class="btn-group">
+                                            <a data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">国税局1</a>
+                                            <ul class='dropdown-menu'>
+                                                <li><a href='#'>查看</a></li>
+                                                <li><a href='#'>新增</a></li>
+                                            </ul>
+                                        </div>
+                                    </a></li>
+                                    <li><a>
+                                        <div class="btn-group">
+                                            <a data-toggle="dropdown" aria-haspopup="true"
+                                               aria-expanded="false">国税局2</a>
+                                            <ul class='dropdown-menu'>
+                                                <li><a href='#'>查看</a></li>
+                                                <li><a href='#'>新增</a></li>
+                                            </ul>
+                                        </div>
+                                    </a></li>
+                                </ul>
+                            </li>
+                            <li><a>区工商所</a></li>
+                        </ul>
+                    </div>
+                    <!-- 区府 -->
+                    <div>
+                        <h4><a>区府2</a></h4>
+                        <ul>
+                            <li><a>区2国税局</a>
+                                <ul>
+                                    <li><a>国税局1</a></li>
+                                    <li><a>国税局2</a></li>
+                                </ul>
+                            </li>
+                            <li><a>区2工商所</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <div class="col-lg-10">
+                <div class="panel panel-default ">
+                    <div class="panel-heading">
+                        <ol class="breadcrumb " style="margin-bottom:0">
+                            <li><a href="#">区府</a></li>
+                            <li><a href="#">区国税局</a></li>
+                            <li class="active">国税局1</li>
+                        </ol>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <h4 class="col-sm-12">组织信息：</h4>
+                            <!-- 第1行   -->
+                            <div class="form-group col-sm-5">
+                                <label for="name" class="col-lg-4 control-label">组织名称</label>
+                                <div class="col-lg-8 ">
+                                    <input type="text" class="form-control" id="name" placeholder="请填写组织名称"/>
+                                </div>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="address" class="col-lg-4 control-label">组织地址</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="address" placeholder="请填写组织地址"/>
+                                </div>
+                            </div>
+                            <!-- 第2行   -->
+                            <div class="form-group col-sm-5">
+                                <label for="liaisons" class="col-lg-4 control-label">组织联络人</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="liaisons" placeholder="请填写组织联络人"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="phone" class="col-lg-4 control-label">组织联络电话</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="phone" placeholder="请填写组织联络电话"/>
+                                </div>
+                            </div>
+                            <h4 class="col-sm-12">管理者信息：</h4>
+                            <!-- 第3行   -->
+                            <div class="form-group col-sm-5">
+                                <label for="controllerName" class="col-lg-4 control-label">管理者姓名</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="controllerName"
+                                           placeholder="请填写组织管理者姓名"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="controllerPhone" class="col-lg-4 control-label">管理者电话</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="controllerPhone"
+                                           placeholder="请填写组织管理者电话"/>
+                                </div>
+                            </div>
+
+                            <!-- 第4行   -->
+                            <div class="form-group col-sm-5">
+                                <label for="controllerUsername" class="col-lg-4 control-label">管理者用户名</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="controllerUsername"
+                                           placeholder="请填写组织管理者姓名"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="controllerPassword" class="col-lg-4 control-label">管理者密码</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="controllerPassword"
+                                           placeholder="请填写组织管理者电话"/>
+                                </div>
+                            </div>
+                            <h4 class="col-sm-12">审核者信息：</h4>
+                            <!-- 第5行   -->
+                            <div class="form-group col-sm-5">
+                                <label for="controllerUsername" class="col-lg-4 control-label">审核者姓名</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="examineName"
+                                           placeholder="请填写组织管理者姓名"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="controllerPassword" class="col-lg-4 control-label">审核者电话</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="examinePhone"
+                                           placeholder="请填写组织管理者电话"/>
+                                </div>
+                            </div>
+
+                            <!-- 第6行   -->
+                            <div class="form-group col-sm-5">
+                                <label for="examineUsername" class="col-lg-4 control-label">审核者用户名</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="examineUsername"
+                                           placeholder="请填写组织管理者姓名"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="examinePassword" class="col-lg-4 control-label">审核者密码</label>
+                                <div class="col-lg-8">
+                                    <input type="text" class="form-control" id="examinePassword"
+                                           placeholder="请填写组织管理者电话"/>
+                                </div>
+                            </div>
+
+                            <!-- 第7行   -->
+                            <div class="form-group col-sm-5">
+                            </div>
+                            <div class="form-group col-sm-6" style="margin-top: 20px">
+
+
+                                <button type="button" class="btn btn-danger" style="float: right ;margin-right: 20px">
+                                    删除
+                                </button>
+                                <button type="button" class="btn btn-primary" style="float: right;margin-right: 20px">
+                                    保存
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /#page-wrapper -->
+
+</div>
+
+
+<th:block th:include="fragments::script"></th:block>
+<script>
+    $("a[href$='index']").addClass("active");
+</script>
+</body>
+
+</html>
